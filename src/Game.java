@@ -5,7 +5,7 @@ public class Game {
 
         String whoWon = DetermineWinner(computerMove, humanMove);
 
-        return STR."\{whoWon} won!";
+        return whoWon + " won!";
     }
 
     private String DetermineWinner(Move computerMove, Move humanMove) {
