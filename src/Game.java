@@ -25,9 +25,9 @@ public class Game {
             return "computer";
 
         if(computerMove == Move.SCISSORS && humanMove == Move.PAPER)
-            return "you";
-        if(computerMove == Move.PAPER && humanMove == Move.SCISSORS)
             return "computer";
+        if(computerMove == Move.PAPER && humanMove == Move.SCISSORS)
+            return "you";
 
         return "error";
     }
