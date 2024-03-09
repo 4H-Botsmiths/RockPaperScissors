@@ -15,9 +15,9 @@ public class Game {
             return "no one";
 
         if(computerMove == Move.PAPER && humanMove == Move.ROCK)
-            return "you";
-        if(computerMove == Move.ROCK && humanMove == Move.PAPER)
             return "computer";
+        if(computerMove == Move.ROCK && humanMove == Move.PAPER)
+            return "you";
 
         if(computerMove == Move.SCISSORS && humanMove == Move.ROCK)
             return "you";
