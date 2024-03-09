@@ -1,7 +1,9 @@
 public class Game {
     public String Shoot() {
-        var computerMove = new ComputerPlayer().GetMove();
         var humanMove = new HumanPlayer().GetMove();
+        var computerMove = new ComputerPlayer().GetMove();
+        System.out.println("Computer Played " + computerMove);
+        System.out.println("You Played " + humanMove);
 
         String whoWon = DetermineWinner(computerMove, humanMove);
 
