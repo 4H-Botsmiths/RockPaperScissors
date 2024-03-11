@@ -1,12 +1,14 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+RockPaperScissors is a Java console app that is used to help teach a First Tech Challenge team how to build and debug Java applications using VS Code.
+
+See if you can find the logical errors and correct them.
 
 ## Folder Structure
 
-The workspace contains two folders by default, where:
+The workspace contains two folders:
 
-- `src`: the folder to maintain sources
+- `src`: the folder to maintain source code
 - `lib`: the folder to maintain dependencies
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
