@@ -4,126 +4,108 @@ import org.junit.Test;
 
 public class GameTest {
   @Test
-  public void DetermineWinner_Computer_Rock_vs_Human_Rock() {
+  public void DetermineWinner_Rock_vs_Rock() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.ROCK;
-    var humanMove = Move.ROCK;
+    var game = new Game(new TestPlayer(Move.ROCK), new TestPlayer(Move.ROCK));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
     assertEquals("no one", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Rock_vs_Human_Paper() {
+  public void DetermineWinner_Rock_vs_Paper() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.ROCK;
-    var humanMove = Move.PAPER;
+    var game = new Game(new TestPlayer(Move.ROCK), new TestPlayer(Move.PAPER));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
-    assertEquals("you", winner);
+    assertEquals("TestPlayer2", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Rock_vs_Human_Scissors() {
+  public void DetermineWinner_Rock_vs_Scissors() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.ROCK;
-    var humanMove = Move.SCISSORS;
+    var game = new Game(new TestPlayer(Move.ROCK), new TestPlayer(Move.SCISSORS));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
-    assertEquals("computer", winner);
+    assertEquals("TestPlayer1", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Paper_vs_Human_Rock() {
+  public void DetermineWinner_Paper_vs_Rock() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.PAPER;
-    var humanMove = Move.ROCK;
+    var game = new Game(new TestPlayer(Move.PAPER), new TestPlayer(Move.ROCK));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
-    assertEquals("computer", winner);
+    assertEquals("TestPlayer1", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Paper_vs_Human_Scissors() {
+  public void DetermineWinner_Paper_vs_Scissors() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.PAPER;
-    var humanMove = Move.SCISSORS;
+    var game = new Game(new TestPlayer(Move.PAPER), new TestPlayer(Move.SCISSORS));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
-    assertEquals("you", winner);
+    assertEquals("TestPlayer2", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Paper_vs_Human_Paper() {
+  public void DetermineWinner_Paper_vs_Paper() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.PAPER;
-    var humanMove = Move.PAPER;
+    var game = new Game(new TestPlayer(Move.PAPER), new TestPlayer(Move.PAPER));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
     assertEquals("no one", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Scissors_vs_Human_Rock() {
+  public void DetermineWinner_Scissors_vs_Rock() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.SCISSORS;
-    var humanMove = Move.ROCK;
+    var game = new Game(new TestPlayer(Move.SCISSORS), new TestPlayer(Move.ROCK));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
-    assertEquals("you", winner);
+    assertEquals("TestPlayer2", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Scissors_vs_Human_Paper() {
+  public void DetermineWinner_Scissors_vs_Paper() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.SCISSORS;
-    var humanMove = Move.PAPER;
+    var game = new Game(new TestPlayer(Move.SCISSORS), new TestPlayer(Move.PAPER));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
-    assertEquals("computer", winner);
+    assertEquals("TestPlayer1", winner);
   }
 
   @Test
-  public void DetermineWinner_Computer_Scissors_vs_Human_Scissors() {
+  public void DetermineWinner_Scissors_vs_Scissors() {
     //arrange
-    var game = new Game();
-    var computerMove = Move.SCISSORS;
-    var humanMove = Move.SCISSORS;
+    var game = new Game(new TestPlayer(Move.SCISSORS), new TestPlayer(Move.SCISSORS));
 
     //act
-    var winner = game.DetermineWinner(computerMove, humanMove);
+    var winner = game.DetermineWinner();
 
     //assert
     assertEquals("no one", winner);
