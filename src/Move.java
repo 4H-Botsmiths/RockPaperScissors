@@ -1,7 +1,7 @@
 public enum Move {
-    ROCK("rock"),
-    PAPER("paper"),
-    SCISSORS("scissors");
+    ROCK("Rock"),
+    PAPER("Paper"),
+    SCISSORS("Scissors");
 
     private final String value;
 
@@ -9,7 +9,7 @@ public enum Move {
         this.value = value;
     }
 
-    public String getValue() {
+    public String toString() {
         return value;
     }
 }
