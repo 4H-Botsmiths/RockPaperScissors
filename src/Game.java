@@ -1,40 +1,43 @@
 public class Game {
     private IPlayer _player1;
     private IPlayer _player2;
+    private String _player1Title;
+    private String _player2Title;
 
     public Game(IPlayer player1, IPlayer player2) {
         _player1 = player1;
         _player2 = player2;
+        _player1Title = player1.toString().split("@")[0] + "1";
+        _player2Title = player2.toString().split("@")[0] + "2";
     }
     public String Shoot() {
-        var humanMove = _player1.GetMove();//new HumanPlayer().GetMove();
-        var computerMove = _player2.GetMove();//new ComputerPlayer().GetMove();
-        System.out.println(_player1.toString().split("@")[0] + "1 Played " + computerMove);
-        System.out.println(_player2.toString().split("@")[0] + "2 Played " + humanMove);
-
-        String whoWon = DetermineWinner(computerMove, humanMove);
+        String whoWon = DetermineWinner();
 
         return whoWon + " won!";
     }
 
-    protected String DetermineWinner(Move computerMove, Move humanMove) {
-        if(computerMove.equals(humanMove))
+    protected String DetermineWinner() {
+        Move move1 = _player1.GetMove();
+        System.out.println(_player1Title + " Played " + move1);
+        Move move2 = _player2.GetMove();
+        System.out.println(_player2Title + " Played " + move2);
+        if (move1.equals(move2))
             return "no one";
 
-        if(computerMove == Move.PAPER && humanMove == Move.ROCK)
-            return "computer";
-        if(computerMove == Move.ROCK && humanMove == Move.PAPER)
-            return "you";
+        if (move1 == Move.PAPER && move2 == Move.ROCK)
+            return _player1Title;
+        if (move1 == Move.ROCK && move2 == Move.PAPER)
+            return _player2Title;
 
-        if(computerMove == Move.SCISSORS && humanMove == Move.ROCK)
-            return "you";
-        if(computerMove == Move.ROCK && humanMove == Move.SCISSORS)
-            return "computer";
+        if (move1 == Move.SCISSORS && move2 == Move.ROCK)
+            return _player2Title;
+        if (move1 == Move.ROCK && move2 == Move.SCISSORS)
+            return _player1Title;
 
-        if(computerMove == Move.SCISSORS && humanMove == Move.PAPER)
-            return "computer";
-        if(computerMove == Move.PAPER && humanMove == Move.SCISSORS)
-            return "you";
+        if (move1 == Move.SCISSORS && move2 == Move.PAPER)
+            return _player1Title;
+        if (move1 == Move.PAPER && move2 == Move.SCISSORS)
+            return _player2Title;
 
         return "error";
     }
