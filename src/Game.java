@@ -1,7 +1,14 @@
 public class Game {
+    private IPlayer _player1;
+    private IPlayer _player2;
+
+    public Game() {
+        _player1 = new HumanPlayer();
+        _player2 = new ComputerPlayer();
+    }
     public String Shoot() {
-        var humanMove = new HumanPlayer().GetMove();
-        var computerMove = new ComputerPlayer().GetMove();
+        var humanMove = _player1.GetMove();//new HumanPlayer().GetMove();
+        var computerMove = _player2.GetMove();//new ComputerPlayer().GetMove();
         System.out.println("Computer Played " + computerMove);
         System.out.println("You Played " + humanMove);
 
