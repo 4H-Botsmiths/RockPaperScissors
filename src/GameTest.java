@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class GameTest {
   @Test
-  public void DetermineWinner_Rock_vs_Rock() {
+  public void DetermineWinner_Player1_Rock_vs_Player2_Rock() {
     //arrange
     var game = new Game(new TestPlayer(Move.ROCK), new TestPlayer(Move.ROCK));
 
@@ -16,7 +16,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Rock_vs_Paper() {
+  public void DetermineWinner_Player1_Rock_vs_Player2_Paper() {
     //arrange
     var game = new Game(new TestPlayer(Move.ROCK), new TestPlayer(Move.PAPER));
 
@@ -28,7 +28,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Rock_vs_Scissors() {
+  public void DetermineWinner_Player1_Rock_vs_Player2_Scissors() {
     //arrange
     var game = new Game(new TestPlayer(Move.ROCK), new TestPlayer(Move.SCISSORS));
 
@@ -40,7 +40,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Paper_vs_Rock() {
+  public void DetermineWinner_Player1_Paper_vs_Player2_Rock() {
     //arrange
     var game = new Game(new TestPlayer(Move.PAPER), new TestPlayer(Move.ROCK));
 
@@ -52,7 +52,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Paper_vs_Scissors() {
+  public void DetermineWinner_Player1_Paper_vs_Player2_Scissors() {
     //arrange
     var game = new Game(new TestPlayer(Move.PAPER), new TestPlayer(Move.SCISSORS));
 
@@ -64,7 +64,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Paper_vs_Paper() {
+  public void DetermineWinner_Player1_Paper_vs_Player2_Paper() {
     //arrange
     var game = new Game(new TestPlayer(Move.PAPER), new TestPlayer(Move.PAPER));
 
@@ -76,7 +76,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Scissors_vs_Rock() {
+  public void DetermineWinner_Player1_Scissors_vs_Player2_Rock() {
     //arrange
     var game = new Game(new TestPlayer(Move.SCISSORS), new TestPlayer(Move.ROCK));
 
@@ -88,7 +88,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Scissors_vs_Paper() {
+  public void DetermineWinner_Player1_Scissors_vs_Player2_Paper() {
     //arrange
     var game = new Game(new TestPlayer(Move.SCISSORS), new TestPlayer(Move.PAPER));
 
@@ -100,7 +100,7 @@ public class GameTest {
   }
 
   @Test
-  public void DetermineWinner_Scissors_vs_Scissors() {
+  public void DetermineWinner_Player1_Scissors_vs_Player2_Scissors() {
     //arrange
     var game = new Game(new TestPlayer(Move.SCISSORS), new TestPlayer(Move.SCISSORS));
 
