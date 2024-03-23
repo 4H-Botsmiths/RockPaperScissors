@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class HumanPlayer {
+public class HumanPlayer implements IPlayer {
     public Move GetMove() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter your move, 1) rock, 2) paper or 3) scissors:");
