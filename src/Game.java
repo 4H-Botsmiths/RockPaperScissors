@@ -8,13 +8,13 @@ public class Game {
         return STR."\{whoWon} won!";
     }
 
-    private String DetermineWinner(Move computerMove, Move humanMove) {
+    protected String DetermineWinner(Move computerMove, Move humanMove) {
         if(computerMove.equals(humanMove))
             return "no one";
 
-        if(computerMove == Move.PAPER && humanMove == Move.ROCK)
-            return "you";
         if(computerMove == Move.ROCK && humanMove == Move.PAPER)
+            return "you";
+        if(computerMove == Move.PAPER && humanMove == Move.ROCK)
             return "computer";
 
         if(computerMove == Move.SCISSORS && humanMove == Move.ROCK)
@@ -22,9 +22,9 @@ public class Game {
         if(computerMove == Move.ROCK && humanMove == Move.SCISSORS)
             return "computer";
 
-        if(computerMove == Move.SCISSORS && humanMove == Move.PAPER)
-            return "you";
         if(computerMove == Move.PAPER && humanMove == Move.SCISSORS)
+            return "you";
+        if(computerMove == Move.SCISSORS && humanMove == Move.PAPER)
             return "computer";
 
         return "error";
