@@ -10,7 +10,7 @@ public class Game {
         return whoWon + " won!";
     }
 
-    private String DetermineWinner(Move computerMove, Move humanMove) {
+    protected String DetermineWinner(Move computerMove, Move humanMove) {
         if(computerMove.equals(humanMove))
             return "no one";
 
