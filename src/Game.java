@@ -17,9 +17,10 @@ public class Game {
 
     protected Result DetermineWinner() {
         var player1Move = _player1.GetMove();
+        var player2Move = _player2.GetMove();
+        
         var player1Output = STR."Player 1 shot \{player1Move}!";
         System.out.println(player1Output);
-        var player2Move = _player2.GetMove();
         var player2Output = STR."Player 2 shot \{player2Move}!";
         System.out.println(player2Output);
 
@@ -32,9 +33,9 @@ public class Game {
             return Result.Player1;
 
         if(player1Move == Move.SCISSORS && player2Move == Move.ROCK)
-            return Result.Player2;
-        if(player1Move == Move.ROCK && player2Move == Move.SCISSORS)
             return Result.Player1;
+        if(player1Move == Move.ROCK && player2Move == Move.SCISSORS)
+            return Result.Player2;
 
         if(player1Move == Move.PAPER && player2Move == Move.SCISSORS)
             return Result.Player2;
