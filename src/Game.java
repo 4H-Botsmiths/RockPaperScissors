@@ -1,5 +1,3 @@
-import static java.lang.StringTemplate.STR;
-
 public class Game {
     private IPlayer _player1;
     private IPlayer _player2;
