@@ -1,4 +1,3 @@
-import static java.lang.StringTemplate.STR;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
