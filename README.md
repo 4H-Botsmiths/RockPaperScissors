@@ -13,7 +13,7 @@ The workspace contains two folders:
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-The project utilizes continuous testing provided by JUnit, a unit testing capability.  When you build the project, you need to have JUnit installed in your development environment.  
+The project utilizes continuous testing provided by JUnit, a unit testing capability.  When you build the project, you need to have JUnit installed in your development environment. To enable this and clear the errors in the IDE, one must activate JUnit in the Testing mode.  Select the beaker and activate the testing, pick JUnit 6. 
 
 > If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
