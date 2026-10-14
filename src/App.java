@@ -17,7 +17,7 @@ public class App {
         else if(result == Result.Error)
             output = "An error occured.";
         else
-            output = STR."\{result} won!";
+            output = result + " won!";
         System.out.println(output);
     }
 

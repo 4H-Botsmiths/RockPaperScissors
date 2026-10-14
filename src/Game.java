@@ -17,9 +17,9 @@ public class Game {
         var player1Move = _player1.GetMove();
         var player2Move = _player2.GetMove();
         
-        var player1Output = STR."Player 1 shot \{player1Move}!";
+        var player1Output = "Player 1 shot " + player1Move + "!";
         System.out.println(player1Output);
-        var player2Output = STR."Player 2 shot \{player2Move}!";
+        var player2Output = "Player 2 shot " + player2Move + "!";
         System.out.println(player2Output);
 
         if(player1Move.equals(player2Move))
